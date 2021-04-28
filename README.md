@@ -6,10 +6,11 @@ Steps to setup prjoect
 - get project script from this location: ShoppingCart\Infrastructure\DbFile
 - execute project script to create database with tables and data
 - load up ShoppingCart.sln in VS
-- build project in following order: Common, Core, Core.Tests, Infrastructure
+- build project in following order: Common, Core, Core.Tests, Infrastructure, API
+- when building the api project, if you get an an error, please delete the API.xml file from the project, the system will generate a new one.
 - change connection string to point to your local database, find appsettings.json file in the API project folder
 - update both appsettings.Development.json and appsettings.Production.json with the correct connectionstring
-- when biulding the api project, if you gan an error, please delete the API.xml file from the project, the system will generate a new one.
+
 
 Steps to setup front-end
 - go to root of the shopping-cart-client project
