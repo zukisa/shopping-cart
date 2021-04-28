@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api</name>
+    </assembly>
+    <members>
+        <member name="T:Api.Controllers.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.AccountController.#ctor(Core.Interfaces.Gateways.Repositories.IUserRepository,Core.Interfaces.Services.IJwtFactory)">
+            <summary>
+            
+            </summary>
+            <param name="userRepository"></param>
+            <param name="jwtFactory"></param>
+        </member>
+        <member name="M:Api.Controllers.AccountController.Post(Api.Models.RegisterUserRequest)">
+            <summary>
+            Register new user
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.AccountController.Post(Api.Models.LoginRequest)">
+            <summary>
+            Authenticate user
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.OrderController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.OrderController.#ctor(Core.Interfaces.Gateways.Repositories.IOrderRepository,Core.Interfaces.Gateways.Repositories.IProductOrderRepository,Core.Interfaces.Gateways.Repositories.IProductRepository,Common.EmailHelper.IEmailSender,Core.Interfaces.Gateways.Repositories.IUserRepository,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="orderRepository"></param>
+            <param name="productOrderRepository"></param>
+            <param name="productRepository"></param>
+            <param name="emailSender"></param>
+            <param name="userRepository"></param>
+            <param name="webHostEnvironment"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Api.Controllers.OrderController.Post(Api.Models.CreateOrderRequest)">
+            <summary>
+            Creates the new order
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.ProductController">
+            <summary>
+            Controller for Product requests
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.ProductController.#ctor(Core.Interfaces.Gateways.Repositories.IProductRepository,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="productRepository"></param>
+            <param name="mapper"></param>
+            
+        </member>
+        <member name="M:Api.Controllers.ProductController.Get">
+            <summary>
+            Returns a list of Products
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.ProductController.Get(System.Guid)">
+            <summary>
+            Returns a product that matches the provided id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.ProductController.Post(Api.Models.CreateProductRequest)">
+            <summary>
+            Create the new product
+            </summary>
+            <param name="request">Product Request Model</param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.ProductController.Put(System.Guid,Api.Models.UpdateProductRequest)">
+            <summary>
+            Modifies the existing Product that matches the provided id
+            </summary>
+            <param name="id">Product Id</param>
+            <param name="request">Product Request model</param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.ProductController.Delete(System.Guid)">
+            <summary>
+            Removes the existing product that matches the provided id
+            </summary>
+            <param name="id">Product Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Extensions.ServiceExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Extensions.ServiceExtensions.ConfigureEmailSettings(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configure IOptions for Email settings on container
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Api.Extensions.ServiceExtensions.ConfigureJwtAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configure Api to use Bearer Token Authentication
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Api.Extensions.ServiceExtensions.ConfigureCors(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure Cross site settings
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Api.Extensions.ServiceExtensions.ConfigureSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure Swagger settings
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Api.Models.CreateOrderRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.CreateOrderRequest.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.CreateOrderRequest.ProductOrders">
+            <summary>
+            Order items
+            </summary>
+        </member>
+        <member name="T:Api.Models.CreateProductRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.LoginRequest">
+            <summary>
+            Model for User login request
+            </summary>
+        </member>
+        <member name="T:Api.Models.Mappings.VMToDomainMappingProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Models.Mappings.VMToDomainMappingProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.ProductOrderRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.ProductOrderRequest.ProductId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.ProductOrderRequest.Quantity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.ProductOrderRequest.ProductName">
+            <summary>
+            Product Name 
+            </summary>
+        </member>
+        <member name="P:Api.Models.ProductOrderRequest.Price">
+            <summary>
+            Product Price
+            </summary>
+        </member>
+        <member name="T:Api.Models.ProductRequestsBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.ProductRequestsBase.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.ProductRequestsBase.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.ProductRequestsBase.Image">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.ProductRequestsBase.Price">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.ProductRequestsBase.StockLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.RegisterUserRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.UpdateProductRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.UpdateProductRequest.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.UserRequestBase">
+            <summary>
+            User Request base model
+            </summary>
+        </member>
+        <member name="P:Api.Models.UserRequestBase.Email">
+            <summary>
+            Email Address for user
+            </summary>
+        </member>
+        <member name="P:Api.Models.UserRequestBase.Password">
+            <summary>
+            Password for user
+            </summary>
+        </member>
+        <member name="T:Api.Models.Validation.CreateProductRequestValidator">
+            <summary>
+            Create Product Request validator
+            </summary>
+        </member>
+        <member name="M:Api.Models.Validation.CreateProductRequestValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.Validation.LoginRequestValidator">
+            <summary>
+            Login Request Validator
+            </summary>
+        </member>
+        <member name="M:Api.Models.Validation.LoginRequestValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.Validation.ProductRequestBaseValidator`1">
+            <summary>
+            Base class for product validation
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Api.Models.Validation.ProductRequestBaseValidator`1.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.Validation.RegisterUserRequestValidator">
+            <summary>
+            Validator for User Registration
+            </summary>
+        </member>
+        <member name="M:Api.Models.Validation.RegisterUserRequestValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.Validation.UpdateProductRequestValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Models.Validation.UpdateProductRequestValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:Api.Utils.DocumentHelper">
+            <summary>
+            Generate documents
+            </summary>
+        </member>
+        <member name="M:Api.Utils.DocumentHelper.ConvertToPDF(System.String,System.String)">
+            <summary>
+            Convert Word document to PDF
+            </summary>
+            <param name="docxFile"></param>
+            <param name="pdfFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Utils.DocumentHelper.GenerateOrder(Core.Entities.Order,Api.Models.CreateOrderRequest,Core.Entities.User,System.String,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Generate Order document
+            </summary>
+            <param name="order"></param>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="templatePath"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Utils.DocumentHelper.AddCurrency(System.Decimal,System.String)">
+            <summary>
+            Convert decimal to string and add currency format
+            </summary>
+            <param name="amount"></param>
+            <param name="currencyFormat"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

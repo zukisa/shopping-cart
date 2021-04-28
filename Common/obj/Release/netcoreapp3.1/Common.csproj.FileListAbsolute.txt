@@ -1,0 +1,9 @@
+C:\PROJECT\ShoppingCart\Common\bin\Release\netcoreapp3.1\Common.deps.json
+C:\PROJECT\ShoppingCart\Common\bin\Release\netcoreapp3.1\Common.dll
+C:\PROJECT\ShoppingCart\Common\bin\Release\netcoreapp3.1\Common.pdb
+C:\PROJECT\ShoppingCart\Common\obj\Release\netcoreapp3.1\Common.csprojAssemblyReference.cache
+C:\PROJECT\ShoppingCart\Common\obj\Release\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+C:\PROJECT\ShoppingCart\Common\obj\Release\netcoreapp3.1\Common.AssemblyInfo.cs
+C:\PROJECT\ShoppingCart\Common\obj\Release\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+C:\PROJECT\ShoppingCart\Common\obj\Release\netcoreapp3.1\Common.dll
+C:\PROJECT\ShoppingCart\Common\obj\Release\netcoreapp3.1\Common.pdb
